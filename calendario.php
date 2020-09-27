@@ -1,6 +1,7 @@
 <?php include_once 'includes/templates/header.php'; ?>
 
   <section class="contenedor">
+    <div class="seccion">
     
       <h2>Calendario de Eventos</h2>
 
@@ -49,7 +50,7 @@
           foreach($calendario as $dia => $lista_eventos) { ?>
 
             <h3>
-              <i class="fa fa-calendar"></i>
+              <i class="far fa-calendar-alt"></i>
               <?php 
               
               //Unix
@@ -58,11 +59,13 @@
               //Windows
               setlocale(LC_TIME, 'spanish');
 
-              echo strftime("%A, %d de %B del %Y)", strtotime ($dia)); ?>
+              echo strftime("%d de %B del 2020", strtotime ($dia)); ?>
             </h3>
 
-            <?php 
-              foreach($lista_eventos as $evento) { ?>
+            <div class="contenedor-dia">
+              <?php 
+                foreach($lista_eventos as $evento) { ?>
+                
               
                 <div class="dia">
                   <p class="titulo"><?php echo $evento ['titulo']; ?></p>
@@ -73,7 +76,7 @@
                   </p>
 
                   <p>
-                    <i class="fas<?php echo $evento ['icono']; ?>" aria-hidden="true"></i>
+                    <i class="fas <?php echo $evento ['icono']; ?>" aria-hidden="true"></i>
                     <?php echo $evento ['categoria']; ?>
                   </p>
 
@@ -83,19 +86,21 @@
                   </p>
                 
                 </div> <!--cierra clase dia-->
-            
+                
               <?php  } // cierra foreach de $lista_eventos ?>
-   
-         <?php } //cierra el foreach de $dia ?>
-
+            </div> <!--cierra clase contenedor-dia-->
+          <?php } //cierra el foreach de $dia ?>
+         
+         
       </div> <!--cierra clase calendario-->
+      
 
       <?php
         $conn->close();
       ?>
 
 
-
+    </div>           
   </section>
 
 

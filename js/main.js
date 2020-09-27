@@ -218,6 +218,15 @@ $('.menu-movil').on('click', function(){
 //LETTERING
 $('.nombre-sitio').lettering ();
 
+
+//RESALTAR PAGINA EN LA NAVEGACIÓN
+
+$('body.conferencia .navegacion-principal a:contains("conferencia")').addClass('activo');
+$('body.calendario .navegacion-principal a:contains("calendario")').addClass('activo');
+$('body.invitados .navegacion-principal a:contains("invitados")').addClass('activo');
+
+
+
 //ANIMACIÓN DE NÚMEROS - INDEX
 
 $('.resumen-evento li:nth-child(1) p').animateNumber ({number:6}, 1600);
@@ -233,6 +242,9 @@ $('.cuenta-regresiva').countdown('2020/12/10 09:00:00', function(event){
     $('#minutos').html(event.strftime('%M'));
     $('#segundos').html(event.strftime('%S'));
 });
+
+$('.invitado-info').colorbox({inline:true, width:"50%"});
+
 
 
 

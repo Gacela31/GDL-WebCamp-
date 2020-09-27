@@ -21,11 +21,21 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <link rel="stylesheet" href="css/main.css">
+  <?php 
+   $archivo = basename($_SERVER['PHP_SELF']);
+   $pagina = str_replace(".php", " ", $archivo);
+   if ($pagina == 'invitados'||$pagina == 'index'){
+      echo '<link rel="stylesheet" href="css/colorbox.css">';
+   } else if ($pagina == 'conferencia') {
+       echo '<link rel="stylesheet" href="css/lightbox.css">';
+   }
+  ?>
+  
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body class="<?php echo $pagina; ?>">
 
   <header class="site-header">
       <div class="contenido-header contenedor">
@@ -75,7 +85,7 @@
         <nav id="navegacion" class="navegacion-principal">
           <a href="conferencia.php">conferencia</a>
           <a href="calendario.php">calendario</a>
-          <a href="#">invitados</a>
+          <a href="invitados.php">invitados</a>
           <a href="registro.php">reservaciones</a>
         </nav>
       </div><!--contenido-principal-->

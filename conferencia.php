@@ -6,8 +6,9 @@
       <p>Praesent rutrum efficitur pharetra. Vivamus scelerisque pretium velit, id tempor turpis pulvinar et. Ut bibendum finibus massa non molestie. Curabitur urna metus, placerat gravida lacus ut, lacinia congue orci. Maecenas luctus mi at ex blandit vehicula. Morbi porttitor tempus euismod.</p>
     </div>
   </section>
-
-  <section class="seccion">
+  
+  <section class="contenedor">
+    <div class="seccion">
       <h2>Galeria de Fotos</h2>
       <div class="galeria">
           <a href="img/galeria/01.jpg" data-lightbox = "galeria">
@@ -41,6 +42,8 @@
             <img src="img/galeria/thumbs/10.jpg">
           </a>
       </div>
+    </div>
+
   </section>
     
 <?php include_once 'includes/templates/footer.php'; ?>
