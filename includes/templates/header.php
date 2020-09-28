@@ -20,8 +20,15 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-  <link rel="stylesheet" href="css/lightbox.min.css">
-  <link rel="stylesheet" href="css/colorbox.css">
+  <?php 
+   $archivo = basename($_SERVER['PHP_SELF']);
+   $pagina = str_replace(".php", "", $archivo);
+   if ($pagina == 'invitados'||$pagina == 'index'){
+      echo '<link rel="stylesheet" href="css/colorbox.css">';
+   } else if ($pagina == 'conferencia') {
+      echo '<link rel="stylesheet" href="css/lightbox.min.css">';
+   }
+  ?>
   <link rel="stylesheet" href="css/main.css">
   
 
