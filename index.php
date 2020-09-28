@@ -20,6 +20,7 @@
       <div class="contenedor">
         <div class="programa-evento">
           <h2>Programa del evento</h2>
+
           <nav class="navegacion-programa">
             <a href="#talleres"><i class="fas fa-code"></i>Talleres</a>
             <a href="#conferencias"><i class="fas fa-comment"></i>Conferencias</a>
@@ -28,17 +29,17 @@
         
           <div id="talleres" class="info-curso ocultar">
             <div class="detalle-evento">
-              <h3>HTML5, CSS3 y JavaScript</h3>
-              <p><i class="far fa-clock"></i>14:00</p>
+              <h3>Responsive Web Design</h3>
+              <p><i class="far fa-clock"></i>10:00</p>
               <p><i class="fas fa-calendar"></i>2020-12-06</p>
-              <p><i class="fas fa-user"></i>Gimena Sanchez Villalba</p>
+              <p><i class="fas fa-user"></i>Rafael Bautista</p>
             </div>
 
             <div class="detalle-evento">
-              <h3>WordPress</h3>
-              <p><i class="far fa-clock"></i>16:00</p>
+              <h3>Flexbox</h3>
+              <p><i class="far fa-clock"></i>12:00</p>
               <p><i class="fas fa-calendar"></i>2020-12-07</p>
-              <p><i class="fas fa-user"></i>Gimena Sanchez Villalba</p>
+              <p><i class="fas fa-user"></i>Sharri Herrera</p>
             </div> 
           </div><!--#talleres-->
 
@@ -76,7 +77,7 @@
 
           
           <div class="btn-derecha">
-            <a href="#" class="boton">Ver Todos</a>
+            <a href="calendario.php" class="boton">Ver Todos</a>
           </div>
         </div><!--programa-evento-->
       </div><!--contenedor-->

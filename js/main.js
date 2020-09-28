@@ -214,18 +214,14 @@ $('.menu-movil').on('click', function(){
     $('.navegacion-principal').slideToggle();
 });
 
-
 //LETTERING
 $('.nombre-sitio').lettering ();
 
-
 //RESALTAR PAGINA EN LA NAVEGACIÓN
 
-$('body.conferencia .navegacion-principal a:contains("conferencia")').addClass('activo');
-$('body.calendario .navegacion-principal a:contains("calendario")').addClass('activo');
-$('body.invitados .navegacion-principal a:contains("invitados")').addClass('activo');
-
-
+$('body.conferencia .navegacion-principal a:contains("conferencia")').addClass('activ');
+$('body.calendario .navegacion-principal a:contains("calendario")').addClass('activ');
+$('body.invitados .navegacion-principal a:contains("invitados")').addClass('activ');
 
 //ANIMACIÓN DE NÚMEROS - INDEX
 
@@ -243,11 +239,10 @@ $('.cuenta-regresiva').countdown('2020/12/10 09:00:00', function(event){
     $('#segundos').html(event.strftime('%S'));
 });
 
+//COLORBOX
+
 $('.invitado-info').colorbox({inline:true, width:"50%"});
 
 
-
-
- 
 
 
