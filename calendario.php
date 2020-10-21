@@ -23,7 +23,7 @@
       
       ?>
 
-      <div class="calendario">
+      <div class="calendar">
         <?php
             $calendario = array();
             while ( $eventos = $resultado->fetch_assoc()) { 
@@ -102,6 +102,5 @@
 
     </div>           
   </section>
-
 
 <?php include_once 'includes/templates/footer.php'; ?>

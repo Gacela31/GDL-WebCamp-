@@ -39,6 +39,10 @@
         var camisas = document.getElementById('camisa_evento');
         var etiqueta = document.getElementById('etiqueta');
 
+        botonRegistro.disabled = true;
+        botonRegistro.style.opacity = "0.5";
+        botonRegistro.style.cursor = "auto";        
+
         //EVENTS LISTENERS
         if(document.getElementById('calcular')){
             calcular.addEventListener('click', calcularMontos)
@@ -138,6 +142,11 @@
                 
                 suma.innerHTML = "$ " + totalPagar.toFixed(2);
 
+                botonRegistro.disabled = false;
+                botonRegistro.style.opacity = "1.0";
+                botonRegistro.style.cursor = "pointer";
+
+                document.getElementById('total_pedido').value = totalPagar;
             }
         } // calcularMontos
 
